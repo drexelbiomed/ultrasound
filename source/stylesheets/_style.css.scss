@@ -1,0 +1,89 @@
+@font-face {
+  font-family: FuturaBold;
+  src: url("http://www.biomed.drexel.edu/new04/Content/fonts/FuturaStd-CondensedBold.otf") format("opentype")
+}
+
+@mixin font-stack{
+  font-family: FuturaBold, sans-serif;
+  text-transform: uppercase;
+} 
+
+body {
+  background-image: url("http://drexel.edu/~/media/Images/coresite/backgrounds/colored-backgrounds/blue-bg/wide.ashx");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.wrap {
+  background: #fff;
+}
+
+.wrap-nav {
+  background-color: #07294D;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-stack;
+}
+
+.logo {
+  height: 164px;
+
+  h1.lockup {
+    position: absolute;
+    top: 37px;
+
+    a {
+      img {
+
+      }
+    }
+  }
+}
+
+nav.top-bar {
+  @media #{$medium-up} {
+    height: 55px;
+  }
+
+  ul.title-area {
+    li.name {
+
+      h1 {
+        font-size: 23px;
+        line-height: 45px !important;
+      }
+
+      @media #{$small-up} { 
+        display: none;
+      }
+
+      @media #{$small-only} { 
+        display: block;
+      }
+    }
+  }
+
+  .top-bar-section {
+    .centerthis {
+      float: none !important;
+      display: block;
+      width: 484px;
+      margin: 0 auto;
+    }
+
+    li.has-dropdown {
+      a {
+        @include font-stack;
+        padding: 20px 30px 21px !important;
+        font-size: 14px;
+        line-height: 14px;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

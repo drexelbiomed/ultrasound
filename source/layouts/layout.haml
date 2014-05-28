@@ -6,22 +6,21 @@
     / Use title if it's in the page YAML frontmatter 
     %title= data.page.title || "The Middleman"
     
-    = stylesheet_link_tag "app", "style"
+    = stylesheet_link_tag "app"
     = javascript_include_tag "modernizr"
   
   %body{ :class => page_classes }
-    .wrapper
-      .row
-        .large-12.columns
-          %h1 Welcome to Foundation
-      .row
-        .large-12.columns
-          = partial "nav-topbar"
-      .row
-        .medium-6.medium-push-3.columns
-          = yield
-        .medium-3.medium-push-3.columns
-          = partial "sidebar-right"
-        .medium-3.medium-pull-9.columns
-          = partial "nav-sidebar"
+    .row
+      .large-12.columns
+        = partial "logo"
+    .row.wrap-nav
+      .large-12.columns
+        = partial "nav-topbar"
+    .row.wrap
+      .medium-6.medium-push-3.columns
+        = yield
+      .medium-3.medium-push-3.columns
+        = partial "sidebar-right"
+      .medium-3.medium-pull-9.columns
+        = partial "nav-sidebar"
     = javascript_include_tag  "all"
