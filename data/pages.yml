@@ -1,19 +1,45 @@
-- title: People
-  url: people
-- title: Research
-  url: research
+- title: Page 1
+  url: page-1
   sub_pages:
-    - title: Cortical Reorganization after Spinal Cord Surgery
-      url: spinal-cord-surgery
-    - title: Neuronal Dynamics during Epilectic Seizures
-      url: epilectic-seizures
-    - title: Cortical Brain Machine Interfaces (BMI) for restoring locomotion
-      url: brain-machine-interfaces
-    - title: Cortical Brain Machine Interfaces (BMI) for restoring locomotion
-      url: activities
-- title: Technoogy Development
-  url: technology-development
-- title: Publications
-  url: publications
+    - title: Sub page 1
+      url: sub-page-1
+    - title: Sub page 2
+      url: sub-page-2
+    - title: Sub page 3
+      url: sub-page-3
+- title: Page 2
+  url: page-2
+  sub_pages:
+    - title: Sub page 1
+      url: sub-page-1
+    - title: Sub page 2
+      url: sub-page-2
+    - title: Sub page 3
+      url: sub-page-3
+- title: Page 3
+  url: page-3
+  sub_pages:
+    - title: Sub page 1
+      url: sub-page-1
+    - title: Sub page 2
+      url: sub-page-2
+    - title: Sub page 3
+      url: sub-page-3
+- title: Page 4
+  url: page-4
+  sub_pages:
+    - title: Sub page 1
+      url: sub-page-1
+    - title: Sub page 2
+      url: sub-page-2
+    - title: Sub page 3
+      url: sub-page-3
 - title: About
   url: about
+  sub_pages:
+    - title: Sub page 1
+      url: sub-page-1
+    - title: Sub page 2
+      url: sub-page-2
+    - title: Sub page 3
+      url: sub-page-3

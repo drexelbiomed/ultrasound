@@ -5,6 +5,5 @@
 
       %ul
         - page.sub_pages.each do |sub|
-          %li= link_to "#{sub.title}", page.url + "/" + sub.url
-
-        
+          %li= link_to "#{sub.title}", "#"
+          / %li= link_to "#{sub.title}", page.url + "/" + sub.url
