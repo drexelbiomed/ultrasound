@@ -10,16 +10,19 @@
     = javascript_include_tag "modernizr"
   
   %body{ :class => page_classes }
-    .row
-      .large-12.columns
-        = partial "logo"
-    .row.wrap-nav
-      .large-12.columns
-        = partial "nav-topbar"
-    .row.wrap
-      .medium-9.columns
-        = yield
-      .medium-3.columns
-        = partial "sidebar-right"
-
+    .container
+      .row
+        .large-12.columns
+          = partial "logo"
+      .row.wrap-nav
+        .large-12.columns
+          = partial "nav-topbar"
+      .row.wrap
+        .medium-9.columns.main-content-home
+          = yield
+        .medium-3.columns.sidebar-right
+          = partial "sidebar-right"
+      %footer.footer
+        = partial "footer"
+      
     = javascript_include_tag  "all"
