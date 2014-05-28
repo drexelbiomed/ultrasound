@@ -1,9 +1,8 @@
-%ul
-  - data.pages.select do |page|
-    - if page.title == current_page.data.title
-      %li= link_to "#{page.title}", page.url
+%h1= current_page.data.title
 
-      %ul
-        - page.sub_pages.each do |sub|
-          %li= link_to "#{sub.title}", "#"
-          / %li= link_to "#{sub.title}", page.url + "/" + sub.url
+- data.pages.select do |page|
+  - if page.title == current_page.data.title
+    %ul
+      - page.sub_pages.each do |sub|
+        %li= link_to "#{sub.title}", "#"
+        / %li= link_to "#{sub.title}", page.url + "/" + sub.url
