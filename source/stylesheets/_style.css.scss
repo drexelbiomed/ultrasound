@@ -22,6 +22,13 @@ body {
 .container {
   min-height: 100%;
   position: relative;
+
+  @media #{$small-only} {
+    padding-bottom: 300px;
+  }
+  @media #{$medium-up} {
+    padding-bottom: 150px;
+  }
 }
 
 .wrap-nav {
@@ -49,12 +56,7 @@ body {
   // HEIGHT OF THE FOOTER
   .main-content, .main-content-home {
     
-    @media #{$small-only} {
-      padding-bottom: 100px;
-    }
-    @media #{$medium-up} {
-      padding-bottom: 150px;
-    }
+
   }
 
   .main-content, .main-content-home, .sidebar-right, .sidebar-left {
@@ -140,10 +142,15 @@ nav.breadcrumb {
   ul {
     margin-bottom: 10px;
     margin-left: 0px;
-    
+
     li {
       display: inline;
       padding: 0px 4px;
+      font-size: 11px;
+
+      a {
+        font-size: 11px;
+      }
     }
   }
 }
@@ -153,7 +160,7 @@ nav.breadcrumb {
 }
 
 nav.nav-sidebar {
-  padding-top: 25px;
+  padding-top: 11px;
 
   h1 {
     font-size: 23px;
@@ -174,11 +181,16 @@ nav.nav-sidebar {
       a {
         display: block;
         padding: 10px 0 10px 10px;
+        @media #{$large-up} {
+         padding-left: 20px;
+        }
         color: #000;
         font-weight: bold;
         position: relative;
         top: -1px;
         margin-bottom: -2px;
+        line-height: 18px;
+
         &.active, &:hover {
           background-color: $drexel-yellow;
         }   
@@ -200,6 +212,9 @@ footer.footer {
 
   img.live-it {
     margin-top: 20px;
+    @media #{$small-only} {
+      padding: 20px 0px;
+    }
   }
   
   ul.inline {
