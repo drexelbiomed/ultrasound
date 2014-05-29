@@ -1,8 +1,11 @@
-%h1= current_page.data.title
-
-- data.pages.select do |page|
-  - if page.title == current_page.data.title
-    %ul
-      - page.sub_pages.each do |sub|
-        %li= link_to "#{sub.title}", "#"
-        / %li= link_to "#{sub.title}", page.url + "/" + sub.url
+%nav.nav-sidebar
+  - data.pages.select do |page|
+    - if current_page?(page) || current_page_is_a_child?(page)
+      %h1= page.title
+      %ul
+        - page.sub_pages.each do |sub|
+          - if current_page?(sub)
+            %li= link_to "#{sub.title}", "#", class: "active"
+          - else
+            %li= link_to "#{sub.title}", "#"
+          / %li= link_to "#{sub.title}", page.url + "/" + sub.url

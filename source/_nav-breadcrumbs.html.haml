@@ -1,0 +1,14 @@
+%nav.breadcrumb
+  %ul
+    %li= link_to "Home", "/"
+    - data.pages.select do |page|
+      - if current_page?(page) 
+        %li / 
+        %li= "#{page.title}"
+      - if current_page_is_a_child?(page)
+        %li / 
+        %li= link_to page.title, page.url
+        %li /
+        - page.sub_pages.select do |sub|
+          - if current_page?(sub)
+            %li= "#{sub.title}"
