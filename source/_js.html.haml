@@ -1,0 +1,12 @@
+/[if lte IE 8]
+  = javascript_include_tag  "all-ie"
+  = javascript_include_tag "rem.min"
+/<![endif]
+
+/[if gt IE 8]
+  = javascript_include_tag  "all"
+/<![endif]
+:plain
+  <!--[if !IE]>
+    <script src="javascripts/all.js"></script>
+  <[endif]-->
