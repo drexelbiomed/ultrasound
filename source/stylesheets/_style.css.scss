@@ -122,13 +122,17 @@ nav.top-bar {
         padding: 20px 30px 21px !important;
         font-size: 14px;
         line-height: 14px;
-
-        &::after {
-          display: none;
-        }
-
-        &.active {
-          color: $drexel-yellow;
+        &::after { display: none; }
+        &.active { color: $drexel-yellow; }
+        &:hover { color: $drexel-yellow; }
+      }
+      ul.dropdown {
+        li {
+          a {
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            text-transform: none;
+          }
         }
       }
     }
