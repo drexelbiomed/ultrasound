@@ -1,11 +1,15 @@
 !!!
+/[if lte IE 8] <html class="no-js ie" lang="en">
+:plain
+  <!--[if gt IE 8] -->
 %html( class="no-js" lang="en" )
+  /<![endif]
   %head
     %meta( charset="utf-8" )
     %meta( name="viewport" content="width=device-width, initial-scale=1.0" )
     / Use title if it's in the page YAML frontmatter 
     %title= data.page.title + " | CONQUER Collaborative" || "CONQUER Collaborative"
-    
+    = partial "ie8-polyfill"
     = stylesheet_link_tag "app"
     = javascript_include_tag "modernizr"
   
@@ -29,3 +33,5 @@
         = partial "footer"
       
     = javascript_include_tag  "all"
+    /[if lt IE 9]
+      = javascript_include_tag "rem.min"
