@@ -50,8 +50,38 @@ page "index.html", :layout => "home-page"
 
 # Reload the browser automatically whenever files change
 activate :livereload
-
 activate :directory_indexes
+
+helpers do
+  def current_page?(page)
+    if page.title == current_page.data.title
+      return true
+    else
+      return false
+    end
+  end
+
+  def current_page_is_a_child?(page)
+    is_a_sub_page = false                     # set the switch in the off position
+
+    page.sub_pages.each do |sub|
+      if sub.title == current_page.data.title # if we are on the sub page
+        is_a_sub_page = true                  # trip the switch
+      end
+    end
+    return is_a_sub_page                      # return the switch's state (true or false)
+  end
+
+  def test_values_compared_in_cp_vs_subpage(page)
+    a = ""
+    page.sub_pages.each do |sub|
+      a+="<p>#{sub.title}, #{current_page.data.title} "
+      a+="is #{sub.title == current_page.data.title}</p>"
+    end
+    return a
+  end
+
+end
 
 # Add bower's directory to sprockets asset path
 after_configuration do
@@ -68,6 +98,8 @@ set :images_dir, 'images'
 activate :livereload
 
 set :haml, { :ugly => true, :format => :html5 }
+
+
 
 # Build-specific configuration
 configure :build do

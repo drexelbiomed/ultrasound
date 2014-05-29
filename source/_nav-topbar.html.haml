@@ -11,9 +11,17 @@
     %ul.centerthis
       - data.pages.each do |page|
         %li.has-dropdown
-          = link_to page.title, "#"
+          - if current_page?(page) || current_page_is_a_child?(page)
+            = link_to page.title, "#", class: "active"
+          - else
+            = link_to page.title, "#"
+
           / = link_to page.title, page.url
           %ul.dropdown
-            - page.sub_pages.each do |sub|  
-              %li= link_to sub.title, "#"
+            - page.sub_pages.each do |sub|
+              %li
+                - if current_page?(sub)
+                  = link_to sub.title, "#", class: "active"
+                - else
+                  = link_to sub.title, "#"
               / %li= link_to sub.title, page.url + "/" + sub.url

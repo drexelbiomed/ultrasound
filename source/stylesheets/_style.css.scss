@@ -3,7 +3,10 @@
   src: url("http://www.biomed.drexel.edu/new04/Content/fonts/FuturaStd-CondensedBold.otf") format("opentype")
 }
 
+$content-border-color: #e1e1e0;
 $footer-border-color: #d6a831;
+$drexel-blue: #07294D;
+$drexel-yellow: #ffc600;
 
 @mixin font-stack{
   font-family: FuturaBold, sans-serif;
@@ -34,12 +37,12 @@ body {
   z-index: 0 !important;
 
   .main-content {
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid $content-border-color;
+    border-right: 1px solid $content-border-color;
   }
 
   .main-content-home {
-    border-right: 1px solid #ccc;
+    border-right: 1px solid $content-border-color;
   }
 
   // HEIGHT OF THE FOOTER
@@ -60,6 +63,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   @include font-stack;
+  color: $drexel-blue;
 }
 
 .logo {
@@ -111,12 +115,17 @@ nav.top-bar {
     li.has-dropdown {
       a {
         @include font-stack;
+        color: #fff;
         padding: 20px 30px 21px !important;
         font-size: 14px;
         line-height: 14px;
 
         &::after {
           display: none;
+        }
+
+        &.active {
+          color: $drexel-yellow;
         }
       }
     }
