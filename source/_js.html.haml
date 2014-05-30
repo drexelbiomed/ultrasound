@@ -1,12 +1,6 @@
-/[if lte IE 8]
-  = javascript_include_tag  "all-ie"
-  = javascript_include_tag "rem.min"
-/<![endif]
+/ Foundation 3 for IE 9 and earlier
+/[if lte IE 9]<script src="javascripts/foundation-3.js"></script>
 
-/[if gt IE 8]
-  = javascript_include_tag  "all"
-/<![endif]
-:plain
-  <!--[if !IE]>
-    <script src="javascripts/all.js"></script>
-  <[endif]-->
+/ Foundation 5 for IE 10 and up 
+= surround "<!--[if gt IE 9]><!-->", "<!--<![endif]-->" do
+  = javascript_include_tag "foundation-5"

@@ -1,4 +1,4 @@
-//= require jquery/jquery-1.11.1.min
+//= require jquery/dist/jquery
 //= require foundation/js/foundation.min
 
 //= require app

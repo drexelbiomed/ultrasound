@@ -1,35 +1,33 @@
 !!!
-/[if lte IE 8] <html class="no-js ie" lang="en">
-:plain
-  <!--[if gt IE 8] -->
-%html( class="no-js" lang="en" )
-  /<![endif]
-  %head
-    %meta( charset="utf-8" )
-    %meta( name="viewport" content="width=device-width, initial-scale=1.0" )
-    / Use title if it's in the page YAML frontmatter 
-    %title= data.page.title + " | CONQUER Collaborative" || "CONQUER Collaborative"
-    = partial "ie8-polyfill"
-    = stylesheet_link_tag "app"
-    = javascript_include_tag "modernizr"
-  
-  %body{ :class => page_classes }
-    %ul.bg-image
-      %li
-        = image_tag "http://drexel.edu/~/media/Images/coresite/backgrounds/colored-backgrounds/blue-bg/wide.ashx"
-    .container
-      .row
-        .large-12.columns
-          = partial "logo"
-      .row.wrap-nav
-        .large-12.columns
-          = partial "nav-topbar"
-      .row.wrap
-        .medium-9.columns.main-content-home
-          = yield
-        .medium-3.columns.sidebar-right
-          = partial "sidebar-right"
-      %footer.footer
-        = partial "footer"
+/[if lte IE 9] <html class="no-js ie" lang="en">
+= surround "<!--[if gt IE 9]><!-->", "<!--<![endif]-->" do
+  %html( class="no-js" lang="en" )
+    %head
+      %meta( charset="utf-8" )
+      %meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+      / Use title if it's in the page YAML frontmatter 
+      %title= data.page.title + " | CONQUER Collaborative" || "CONQUER Collaborative"
 
-    = partial "js" 
+      = javascript_include_tag "modernizr"
+      = partial "css"
+
+    %body{ :class => page_classes }
+      %ul.bg-image
+        %li
+          = image_tag "http://drexel.edu/~/media/Images/coresite/backgrounds/colored-backgrounds/blue-bg/wide.ashx"
+      .container
+        .row
+          .twelve.large-12.columns
+            = partial "logo"
+        .row.wrap-nav
+          .twelve.large-12.columns
+            = partial "nav-topbar"
+        .row.wrap
+          .nine.medium-9.columns.main-content-home
+            = yield
+          .three.medium-3.columns.sidebar-right
+            = partial "sidebar-right"
+        %footer.footer
+          = partial "footer"
+
+      = partial "js"

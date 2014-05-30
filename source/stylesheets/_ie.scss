@@ -1,0 +1,336 @@
+@font-face {
+  font-family: FuturaBold;
+  src: url("http://www.biomed.drexel.edu/new04/Content/fonts/FuturaStd-CondensedBold.otf") format("opentype")
+}
+
+$content-border-color: #e1e1e0;
+$footer-border-color: #d6a831;
+$drexel-blue: #07294D;
+$drexel-yellow: #ffc600;
+
+@mixin font-stack{
+  font-family: FuturaBold, sans-serif;
+  text-transform: uppercase;
+} 
+
+body {
+  background-image: url("http://drexel.edu/~/media/Images/coresite/backgrounds/colored-backgrounds/blue-bg/wide.ashx");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.container {
+  min-height: 100%;
+  position: relative;
+
+  // @media #{$small-only} {
+  //   padding-bottom: 300px;
+  // }
+  // @media #{$medium-up} {
+  //   padding-bottom: 150px;
+  // }
+}
+
+ul.bg-image {
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: absolute;
+    height: 436px;
+    background: #052F53;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      display: block;
+      margin-left: -800px;
+      max-width: 1600px;
+      z-index: 0;
+    }
+  }
+}
+
+.wrap-nav {
+  z-index: 10 !important;
+  background-color: #07294D;
+  -webkit-box-shadow: 0px 0px 7px rgb(0, 0, 0);
+  box-shadow: 0px 0px 7px rgb(0, 0, 0);
+}
+
+.wrap {
+  background: #fff;
+  position: relative;
+  z-index: 5 !important;
+  padding: 10px 20px 10px;
+
+  .main-content {
+    border-left: 1px solid $content-border-color;
+    border-right: 1px solid $content-border-color;
+  }
+
+  .main-content-home {
+    border-right: 1px solid $content-border-color;
+  }
+
+  // HEIGHT OF THE FOOTER
+  .main-content, .main-content-home {
+    
+
+  }
+
+  .main-content, .main-content-home, .sidebar-right, .sidebar-left {
+    padding-top: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-stack;
+  color: $drexel-blue;
+}
+
+.logo {
+  height: 164px;
+
+  h1.lockup {
+    position: absolute;
+    top: 37px;
+
+    a {
+      img {
+
+      }
+    }
+  }
+}
+
+nav.top-bar {
+  // @media #{$medium-up} {
+    // height: 55px;
+  // }
+  height: 55px;
+  background-color: transparent;
+  margin-bottom: 0px;
+
+  ul.title-area {
+    margin-bottom: 0px;
+    li.name {
+
+      h1 {
+        font-size: 23px;
+        line-height: 45px !important;
+      }
+
+      // @media #{$small-up} { 
+      display: none;
+      // }
+
+      // @media #{$small-only} { 
+      //   display: block;
+      // }
+    }
+  }
+
+  section.top-bar-section {
+    margin-bottom: 0px;
+
+    .centerthis {
+      float: none !important;
+      display: block;
+      width: 550px;
+      margin: 0 auto;
+    }
+
+    li.has-dropdown {
+      a {
+        @include font-stack;
+        color: #fff;
+        padding: 20px 30px 21px;
+        font-size: 14px;
+        line-height: 14px;
+        &:after { display: none; }
+        &::after { display: none; }
+        &.active { color: $drexel-yellow; }
+        &:hover { color: $drexel-yellow; }
+      }
+      ul.dropdown {
+        padding: 0px;
+        background-color: $drexel-blue;
+        li {
+          padding: 10px 0px;
+          a {
+            padding: 10px 30px;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            text-transform: none;
+            background-color: $drexel-blue;
+            &.active { color: $drexel-yellow; }
+          }
+        }
+      }
+    }
+  }
+}
+
+nav.breadcrumb {
+  margin-bottom: 0px;
+  border-bottom: 1px solid $content-border-color;
+
+  ul {
+    margin-bottom: 10px;
+    margin-left: 0px;
+
+    li {
+      display: inline;
+      padding: 0px 4px;
+      font-size: 11px;
+
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.sidebar-left {
+  padding-right: 0px;
+}
+
+nav.nav-sidebar {
+  padding-top: 11px;
+
+  h1 {
+    font-size: 23px;
+    line-height: 23px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    margin: 0px;
+    li {
+      list-style: none;
+      border-bottom: 1px solid $content-border-color;
+
+      &:first-child {
+        border-top: 1px solid $content-border-color
+      }
+
+      a {
+        display: block;
+        padding: 10px 0 10px 10px;
+        padding-left: 20px;
+        color: #000;
+        font-weight: bold;
+        position: relative;
+        top: -1px;
+        margin-bottom: -2px;
+        line-height: 18px;
+
+        &.active, &:hover {
+          background-color: $drexel-yellow;
+        }   
+      }
+    }
+  }
+}
+
+footer.footer {
+  width: 100%;
+  // position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: #ffc600;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,.8);
+  box-shadow: 0 0 20px rgba(0,0,0,.8);
+
+  img.live-it {
+    margin-top: 20px;
+    // @media #{$small-only} {
+    //   padding: 20px 0px;
+    // }
+  }
+  
+  ul.inline {
+    margin: 28px 0 0;
+
+
+    li {
+      display: inline;
+      border-right: 1px solid $footer-border-color;
+      &:last-child { border: none; }
+
+      a {
+        padding: 0px;
+        padding-left: 4px;
+        padding-right: 6px;
+        color: #333;
+        font-size: 11px;
+      }
+    }
+  }
+  
+  ul.inline.social {
+    margin: 0px;
+
+    li {
+      border: none;
+      padding: 0px;
+
+      a {
+        padding: 0px;
+      }
+    }
+  }
+
+  p {
+    color: #333;
+
+    &.address {
+      margin: 7px 0;
+    }
+
+    &.social-label {
+      margin: 10px 0 5px;
+      margin-bottom: 0px;
+      font: 11px/1 Arial, sans-serif;
+    }
+  }
+
+
+  #skinny-nav {
+    border-top: 1px solid $footer-border-color;
+  }
+}
+
+.white {
+  // @media #{$small-only} {
+  //   background-color: #fff;
+  // }
+}
+
+.icon {
+  height:30px;
+  width:30px;
+  display:inline-block;
+  *display:block;
+  *float:left;
+  background-image:url(http://drexel.edu/~/media/Images/coresite/ui/sprite.ashx);
+  background-repeat:no-repeat;
+}
+
+
+.social-blue .duicon-facebook { 
+  background-position:-54px -247px; 
+}
+.social-blue .duicon-twitter { 
+  background-position:-84px -247px; 
+}
+.social-blue .duicon-flickr { 
+  background-position:-114px -247px; 
+}
+.social-blue .duicon-youtube { 
+  background-position:-144px -247px; 
+}
