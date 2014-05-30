@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "private": "true",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation-3": "davidmyers9000/foundation-3",
+    "foundation": "zurb/bower-foundation",
+    "jquery-1.11.1": "http://code.jquery.com/jquery-1.11.1.min.js",
+    "normalize.css": "~3.0.1"
   }
 }
