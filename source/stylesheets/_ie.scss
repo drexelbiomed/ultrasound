@@ -147,7 +147,7 @@ nav.top-bar {
     .centerthis {
       float: none !important;
       display: block;
-      width: 550px;
+      width: 560px;
       margin: 0 auto;
     }
 
@@ -162,14 +162,18 @@ nav.top-bar {
         line-height: 14px;
         &:after { display: none; }
         &::after { display: none; }
-        &.active { color: $drexel-yellow; }
-        &:hover { color: $drexel-yellow; }
+        &.active { background-color: $drexel-blue; color: $drexel-yellow; }
+        &:hover { background-color: $drexel-blue; color: $drexel-yellow; }
+        &:focus { background-color: $drexel-blue; color: $drexel-yellow; }
       }
       ul.dropdown {
         padding: 0px;
         background-color: $drexel-blue;
+
         li {
           padding: 10px 0px;
+          background-color: $drexel-blue;
+
           a {
             padding: 10px 30px;
             font-size: 12px;
@@ -183,6 +187,8 @@ nav.top-bar {
     }
   }
 }
+
+.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus { background: $drexel-blue; }
 
 nav.breadcrumb {
   margin-bottom: 0px;
