@@ -30,6 +30,7 @@ body {
   min-height: 100%;
   position: relative;
 
+
   // @media #{$small-only} {
   //   padding-bottom: 300px;
   // }
@@ -73,6 +74,7 @@ ul.bg-image {
   position: relative;
   z-index: 5 !important;
   padding: 10px 20px 10px;
+  margin-bottom: 20px;
 
   .main-content {
     border-left: 1px solid $content-border-color;
