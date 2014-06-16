@@ -5,7 +5,7 @@
       %ul
         - page.sub_pages.each do |sub|
           - if current_page?(sub)
-            %li= link_to "#{sub.title}", "#", class: "active"
+            %li= link_to "#{sub.title}", "#{page.url+'/'+sub.url}", class: "active"
           - else
-            %li= link_to "#{sub.title}", "#"
+            %li= link_to "#{sub.title}", "#{page.url+'/'+sub.url}"
           / %li= link_to "#{sub.title}", page.url + "/" + sub.url
