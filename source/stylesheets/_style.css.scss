@@ -26,9 +26,13 @@ body {
   background-position: top center;
 }
 
-.container {
+.height {
   min-height: 100%;
   position: relative;
+}
+
+.container {
+
 
   @media (min-width: 1260px) {
     width: 1220px;
@@ -51,7 +55,7 @@ body {
     padding-bottom: 300px;
   }
   @media #{$medium-up} {
-    padding-bottom: 150px;
+    padding-bottom: 200px;
   }
 
   transition: all 0.2s;
@@ -86,7 +90,13 @@ ul.bg-image {
       }
 
       @media (min-width: 768px) {
+        margin-left: -512px;
         max-width: 1600px;
+      }
+
+      @media #{$large-up} {
+        margin-left: -800px;
+        left: 50%;
       }
 
       z-index: 0;
@@ -149,10 +159,10 @@ h1, h2, h3, h4, h5, h6 {
 @import "nav";
 
 footer.footer {
-  width: 100%;
   position: absolute;
   bottom: 0px;
   left: 0px;
+  width: 100%;
   background-color: #ffc600;
   @media #{$medium-up} {
     -webkit-box-shadow: 0 0 20px rgba(0,0,0,.8);
@@ -230,7 +240,7 @@ footer.footer {
   display:inline-block;
   *display:block;
   *float:left;
-  background-image:url(http://drexel.edu/~/media/Images/coresite/ui/sprite.ashx);
+  background-image:url("../images/sprite.png");
   background-repeat:no-repeat;
 }
 

@@ -15,24 +15,25 @@
       %ul.bg-image
         %li
           = image_tag "http://drexel.edu/~/media/Images/coresite/backgrounds/colored-backgrounds/blue-bg/wide.ashx"
-      .container
-        .row
-          .twelve.large-12.columns
-            = partial "logo"
-        .row.wrap-nav
-          .twelve.large-12.columns
-            = partial "nav-topbar"
-        .row.wrap
+      .height
+        .container
           .row
             .twelve.large-12.columns
-              = partial "nav-breadcrumbs"
-          .row
-            .six.push-three.medium-6.medium-push-3.columns.main-content
-              = yield
-            .three.push-three.medium-3.medium-push-3.columns.sidebar-right
-              = partial "sidebar-right"
-            .three.pull-nine.medium-3.medium-pull-9.columns.sidebar-left
-              = partial "nav-sidebar"
+              = partial "logo"
+          .row.wrap-nav
+            .twelve.large-12.columns
+              = partial "nav-topbar"
+          .row.wrap
+            .row
+              .twelve.large-12.columns
+                = partial "nav-breadcrumbs"
+            .row
+              .six.push-three.medium-6.medium-push-3.columns.main-content
+                = yield
+              .three.push-three.medium-3.medium-push-3.columns.sidebar-right
+                = partial "sidebar-right"
+              .three.pull-nine.medium-3.medium-pull-9.columns.sidebar-left
+                = partial "nav-sidebar"
         %footer.footer
           = partial "footer"
 
