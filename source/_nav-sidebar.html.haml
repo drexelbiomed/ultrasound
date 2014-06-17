@@ -1,11 +1,14 @@
 %nav.nav-sidebar
   - data.pages.select do |page|
-    - if current_page?(page) || current_page_is_a_child?(page)
+    - if current_page?(page) || current_page_is_a_sub_page?(page)
       %h1= page.title
       %ul
-        - page.sub_pages.each do |sub|
-          - if current_page?(sub)
-            %li= link_to "#{sub.title}", "#{page.url+'/'+sub.url}", class: "active"
-          - else
-            %li= link_to "#{sub.title}", "#{page.url+'/'+sub.url}"
-          / %li= link_to "#{sub.title}", page.url + "/" + sub.url
+        - if page.sub_pages?
+          - page.sub_pages.select do |sub|
+            - if current_page?(sub)
+              %li= link_to "#{sub.title}", "/#{page.url}/#{sub.url}", class: "active"
+            - else
+              %li= link_to "#{sub.title}", "/#{page.url}/#{sub.url}"
+            / %li= link_to "#{sub.title}", page.url + "/" + sub.url
+        - else
+          %li= link_to "Overview", "#", class: "active"

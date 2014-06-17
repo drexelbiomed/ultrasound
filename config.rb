@@ -63,12 +63,14 @@ helpers do
     end
   end
 
-  def current_page_is_a_child?(page)
+  def current_page_is_a_sub_page?(page)
     is_sub_page = false                     # set the switch in the off position
 
-    page.sub_pages.each do |sub|
-      if sub.title == current_page.data.title # if we are on the sub page
-        is_sub_page = true                  # trip the switch
+    if page.sub_pages?
+      page.sub_pages.each do |sub|
+        if sub.title == current_page.data.title # if we are on the sub page
+          is_sub_page = true                  # trip the switch
+        end
       end
     end
     return is_sub_page                      # return the switch's state (true or false)

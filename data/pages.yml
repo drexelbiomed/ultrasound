@@ -1,12 +1,6 @@
 - title: Page 1
   url: page-1
-  sub_pages:
-    - title: Sub page 1
-      url: sub-page-1
-    - title: Sub page 2
-      url: sub-page-2
-    - title: Sub page 3
-      url: sub-page-3
+
 - title: Page 2
   url: page-2
   sub_pages:

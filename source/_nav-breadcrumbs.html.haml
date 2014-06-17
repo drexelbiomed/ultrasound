@@ -5,7 +5,7 @@
       - if current_page?(page) 
         %li / 
         %li= "#{page.title}"
-      - if current_page_is_a_child?(page)
+      - if current_page_is_a_sub_page?(page)
         %li / 
         %li= link_to page.title, page.url
         %li /
