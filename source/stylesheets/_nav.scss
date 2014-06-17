@@ -61,10 +61,12 @@ nav.top-bar {
       }
       ul.dropdown {
         li {
+          width: 200px;
           a {
             font-size: 12px;
             font-family: Arial, sans-serif;
             text-transform: none;
+            white-space: normal;
             &.active { color: $drexel-yellow; }
           }
         }
