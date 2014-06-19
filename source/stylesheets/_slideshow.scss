@@ -1,0 +1,46 @@
+.slideshow {
+  position: relative;
+  height: 335px;
+  
+}
+
+.bx-wrapper {
+  
+  .bx-viewport {
+    @include single-box-shadow( transparent, 0px, 0px, 0px );
+  }
+
+  .bx-caption {
+    background: $drexel-blue;
+
+
+    @media #{$medium-up} {
+      left: inherit;
+      right: 0;
+      height: 100%;
+      width: 40%;
+      background: $drexel-blue;
+    }
+  }
+  .bx-controls {
+    @media #{$medium-up} {
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      width: 150px;
+    }
+  }
+  .bx-controls-direction {
+    @media #{$medium-up} {
+      .bx-next {
+        right: 0;
+        margin-top: 0px;
+      }
+
+      .bx-prev {
+        left: 0;
+        margin-top: 0px;
+      }
+    }
+  }
+}
