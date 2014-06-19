@@ -1,46 +1,186 @@
-.slideshow {
-  position: relative;
-  height: 335px;
-  
+ul.bxslider {
+  margin-left: 0;
 }
 
 .bx-wrapper {
-  
+  position: relative;
+  @media #{$small-only} {
+    max-width: 500px !important;
+  }
+  @media #{$medium-up} { height: 199px; }
+  @media #{$large-up} { height: 268px; }
+  @media #{$xlarge-up} { height: 335px; }
+
+  img {
+    @media #{$small-only} {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+    }
+    @media #{$medium-up} {
+      height: 199px;
+    }
+    @media #{$large-up} {
+      height: 268px;
+    }
+    @media #{$xlarge-up} {
+      height: 335px;
+    }
+  }
+
   .bx-viewport {
     @include single-box-shadow( transparent, 0px, 0px, 0px );
   }
-
   .bx-caption {
     background: $drexel-blue;
-
-
+    left: inherit;
+    @media #{$small-only} {
+      position: relative;
+      margin-top: -5px;
+      height: 285px;
+      max-width: 500px;
+      width: 100%;
+      background-color: #07294D;
+      padding: 36px 37px 0px;
+    }
     @media #{$medium-up} {
-      left: inherit;
-      right: 0;
-      height: 100%;
-      width: 40%;
-      background: $drexel-blue;
+      position: absolute;
+      height: 199px;
+      width: 224px;
+      padding: 15px 15px 0;
+      top: 0px;
+      left: 296px;
+      margin-top: 0px;
+    }
+
+    @media #{$large-up} {
+      height: 268px;
+      width: 301px;
+      padding: 15px 20px 0;
+      top: 0px;
+      left: 399px;
+      margin-bottom: 10px;
+    }
+
+    @media #{$xlarge-up} {
+      position: absolute;
+      top: 0px;
+      left: 500px;
+      height: 335px;
+      width: 380px;
+      background-color: #07294D;
+      padding: 36px 37px 0px;
+    }
+    span {
+      font-family: FuturaBold, sans-serif;
+      text-transform: uppercase;
+      @media #{$small-only} {
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+      }
+      @media #{$medium-up} {
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.03em;
+        font-weight: 100;
+        margin-bottom: 10px;
+      }
+      @media #{$large-up} {
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+      }
+      @media #{$xlarge-up} {
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.05em;
+      }
     }
   }
   .bx-controls {
+    @media #{$small-only} { 
+      position: relative; 
+      margin-left: 40px;
+      margin-top: -40px;
+      width: 142px;
+      z-index: 100;
+      bottom: 35px;
+    }
     @media #{$medium-up} {
       position: absolute;
-      bottom: 50px;
-      right: 50px;
-      width: 150px;
+      width: 142px;
+      left: 297px;
+      bottom: 10px;
+      margin-top: 0px;
+    }
+
+    @media #{$large-up} {
+      left: 420px;
+      bottom: 20px;
+      // width: 200px;
+    }
+
+    @media #{$xlarge-up} {
+      left: 537px;
+      bottom: 30px;
+      z-index: 100;
+      // width: 300px;
     }
   }
   .bx-controls-direction {
-    @media #{$medium-up} {
-      .bx-next {
-        right: 0;
-        margin-top: 0px;
-      }
+    z-index: 100;
 
-      .bx-prev {
-        left: 0;
-        margin-top: 0px;
-      }
+    @media #{$small-only} {
+    }
+    @media #{$medium-up} {
+      // width: 180px;
+    }
+
+    @media #{$large-up} {
+      // width: 180px;
+    }
+
+    @media #{$xlarge-up} {
+      // width: 180px;
     }
   }
 }
+
+a.bx-prev {
+  display: block !important;
+  height: 30px !important;
+  text-indent: -999em !important;
+  width: 20px !important;
+  float: left !important;
+  background: url("/images/sprite.png") repeat scroll -211px -193px transparent !important;
+}
+
+a.bx-next {
+  background: url("/images/sprite.png") repeat scroll -258px -193px transparent !important;
+  display: block !important;
+  height: 30px !important;
+  text-indent: -999em !important;
+  width: 20px !important;
+  float: left !important;
+}
+.bx-pager {
+  position: relative !important;
+  left: 0px !important;
+  bottom: 1px !important;
+  z-index: 100 !important;
+  padding: 0px !important;
+  margin-left: 30px !important;
+  text-align: left !important;
+
+  a {
+    background: url("/images/sprite.png") repeat scroll -151px -193px transparent !important;
+    display: block !important;
+    width: 20px !important;
+    height: 30px !important;
+    margin: 0 !important;
+    &.active {
+      background-position: -106px -193px !important;
+    }
+  }
+} 
