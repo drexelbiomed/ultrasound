@@ -6,15 +6,13 @@
       %meta( charset="utf-8" )
       %meta( name="viewport" content="width=device-width, initial-scale=1.0" )
       / Use title if it's in the page YAML frontmatter 
-      %title= data.page.title + " | CONQUER Collaborative" || "CONQUER Collaborative"
+      %title= "#{data.page.title} | #{data.info.site.title}" || "#{data.info.site.title}"
 
       = javascript_include_tag "modernizr"
       = partial "css"
 
     %body{ :class => page_classes }
-      %ul.bg-image
-        %li
-          = image_tag "http://drexel.edu/~/media/Images/coresite/backgrounds/colored-backgrounds/blue-bg/wide.ashx"
+      = partial "bg-image"
       .height
         .container
           .row
