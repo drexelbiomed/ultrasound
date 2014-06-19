@@ -1,0 +1,141 @@
+
+@mixin font-stack{
+  font-family: FuturaBold, sans-serif;
+  text-transform: uppercase;
+} 
+
+body {
+  background-image: url("/images/wide.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.height {
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+
+
+  @media (min-width: 1260px) {
+    width: 1220px;
+    margin: 0 auto;
+    .row { max-width: 94em; }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1260px) {
+    width: 980px;
+    margin: 0 auto;
+    .row { max-width: 94em; }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 720px;
+    margin: 0 auto;
+  }
+
+  @media #{$small-only} {
+    padding-bottom: 300px;
+  }
+  @media #{$medium-up} {
+    padding-bottom: 200px;
+  }
+
+  transition: all 0.2s;
+
+}
+
+ul.bg-image {
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: absolute;
+    height: 436px;
+    background: #052F53;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      position: absolute;
+      top: 0px;
+      display: block;
+      max-width: 1600px;
+      @media #{$small-only} {
+        margin-left: -320px;
+        left: 50%;
+        max-width: 640px;
+      }
+      @media #{$medium-only} {
+        margin-left: -400px;
+        left: 50%;
+        max-width: 800px;
+      }
+
+      @media (min-width: 768px) {
+        margin-left: -512px;
+        max-width: 1600px;
+      }
+
+      @media #{$large-up} {
+        margin-left: -800px;
+        left: 50%;
+      }
+
+      z-index: 0;
+    }
+  }
+}
+
+.wrap {
+  background: #fff;
+  position: relative;
+  z-index: 5 !important;
+  padding: 10px 20px 10px;
+
+  .main-content {
+    @media #{$medium-up} {
+      border-left: 1px solid $content-border-color;
+      border-right: 1px solid $content-border-color;
+    }
+  }
+
+  .main-content-home {
+    @media #{$medium-up} {
+      border-right: 1px solid $content-border-color;
+    }
+  }
+
+  // HEIGHT OF THE FOOTER
+  .main-content, .main-content-home {
+    
+
+  }
+
+  .main-content, .main-content-home, .sidebar-right, .sidebar-left {
+    padding-top: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-stack;
+  color: $drexel-blue;
+}
+
+.logo {
+  height: 164px;
+
+  h1.lockup {
+    position: absolute;
+    top: 37px;
+    margin-right: 20px;
+
+    a {
+      img {
+
+
+      }
+    }
+  }
+}
