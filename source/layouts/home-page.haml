@@ -13,18 +13,19 @@
 
     %body{ :class => page_classes }
       = partial "bg-image"
-      .container
-        .row
-          .twelve.large-12.columns
-            = partial "logo"
-        .row.wrap-nav
-          .twelve.large-12.columns
-            = partial "nav-topbar"
-        .row.wrap
-          .nine.medium-9.columns.main-content-home
-            = yield
-          .three.medium-3.columns.sidebar-right
-            = partial "sidebar-right"
+      .height
+        .container
+          .row
+            .twelve.large-12.columns
+              = partial "logo"
+          .row.wrap-nav
+            .twelve.large-12.columns
+              = partial "nav-topbar"
+          .row.wrap
+            .nine.medium-9.columns.main-content-home
+              = yield
+            .three.medium-3.columns.sidebar-right
+              = partial "sidebar-right"
         %footer.footer
           = partial "footer"
 

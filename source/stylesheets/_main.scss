@@ -16,30 +16,26 @@ body {
 }
 
 .container {
-
-
-  @media (min-width: 1260px) {
-    width: 1220px;
+  @media #{$small-only} {
+    padding-bottom: 300px;
+  }
+  
+  @media #{$medium-up} {
+    width: 720px;
     margin: 0 auto;
-    .row { max-width: 94em; }
+    padding-bottom: 200px;
   }
 
-  @media (min-width: 1024px) and (max-width: 1260px) {
+  @media #{$large-up} {
     width: 980px;
     margin: 0 auto;
     .row { max-width: 94em; }
   }
 
-  @media (min-width: 768px) and (max-width: 1024px) {
-    width: 720px;
+  @media #{$xlarge-up} {
+    width: 1220px;
     margin: 0 auto;
-  }
-
-  @media #{$small-only} {
-    padding-bottom: 300px;
-  }
-  @media #{$medium-up} {
-    padding-bottom: 200px;
+    .row { max-width: 94em; }
   }
 
   transition: all 0.2s;

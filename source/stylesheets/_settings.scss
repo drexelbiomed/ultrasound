@@ -67,11 +67,12 @@ $body-font-color: #000;
 // $shiny-edge-active-color: rgba(#000, .2);
 
 // Media Query Ranges
-$small-range: (0em, 46.25em); 
-$medium-range: (46.313em, 64em);
-$large-range: (64.063em, 78.75em);
-$xlarge-range: (78.813em, 120em);
-$xxlarge-range: (120.063em);
+// As found on http://drexel.edu
+$small-range: (0em, 46.25em); // 0 - 768px
+$medium-range: (46.313em, 64em); // 769px - 1024px
+$large-range: (64.063em, 78.75em); // 1025px - 1260px
+$xlarge-range: (78.813em, 120em);  // 1261 - 1920px
+$xxlarge-range: (120.063em); // > 1921px
 
 // $screen: "only screen";
 
