@@ -20,3 +20,5 @@
 .DS_Store
 
 Gemfile.lock
+
+bower_components/
