@@ -7,6 +7,7 @@ compass_config do |config|
   config.add_import_path "bower_components/foundation/scss"
   config.add_import_path "bower_components/foundation-3/stylesheets"
   config.add_import_path "bower_components/normalize/"
+  config.add_import_path "bower_components/bxslider-4/"
   
   # Set this to the root of your project when deployed:
   config.http_path = "/"
