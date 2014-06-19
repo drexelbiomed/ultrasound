@@ -130,20 +130,6 @@ ul.bxslider {
   }
   .bx-controls-direction {
     z-index: 100;
-
-    @media #{$small-only} {
-    }
-    @media #{$medium-up} {
-      // width: 180px;
-    }
-
-    @media #{$large-up} {
-      // width: 180px;
-    }
-
-    @media #{$xlarge-up} {
-      // width: 180px;
-    }
   }
 }
 

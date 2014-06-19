@@ -1,0 +1,80 @@
+ul.bxslider {
+  margin-left: 0;
+}
+
+.bx-wrapper {
+  position: relative;
+  height: 268px;
+
+  img {
+    height: 268px;
+  }
+  .bx-viewport {
+    box-shadow: 0px 0px 0px transparent;
+  }
+  .bx-caption {
+    background: $drexel-blue;
+    left: inherit;
+    height: 268px;
+    width: 301px;
+    padding: 15px 20px 0;
+    top: 0px;
+    left: 399px;
+    margin-bottom: 10px;
+    span {
+      font-family: FuturaBold, sans-serif;
+      text-transform: uppercase;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 0.04em;
+    }
+  }
+  .bx-controls {
+    position: absolute;
+    margin-top: 0px;
+    width: 142px;
+    left: 420px;
+    bottom: 20px;
+  }
+  .bx-controls-direction {
+    z-index: 100;
+  }
+}
+
+a.bx-prev {
+  display: block !important;
+  height: 30px !important;
+  text-indent: -999em !important;
+  width: 20px !important;
+  float: left !important;
+  background: url("/images/sprite.png") repeat scroll -211px -193px transparent !important;
+}
+
+a.bx-next {
+  background: url("/images/sprite.png") repeat scroll -258px -193px transparent !important;
+  display: block !important;
+  height: 30px !important;
+  text-indent: -999em !important;
+  width: 20px !important;
+  float: left !important;
+}
+.bx-pager {
+  position: relative !important;
+  left: 0px !important;
+  bottom: 1px !important;
+  z-index: 100 !important;
+  padding: 0px !important;
+  margin-left: 30px !important;
+  text-align: left !important;
+
+  a {
+    background: url("/images/sprite.png") repeat scroll -151px -193px transparent !important;
+    display: block !important;
+    width: 20px !important;
+    height: 30px !important;
+    margin: 0 !important;
+    &.active {
+      background-position: -106px -193px !important;
+    }
+  }
+}
