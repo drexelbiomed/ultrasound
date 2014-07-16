@@ -1,0 +1,92 @@
+
+@mixin font-stack{
+  font-family: FuturaBold, sans-serif;
+  text-transform: uppercase;
+} 
+
+body {
+  background-image: image-url("wide.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.height {
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  .row { max-width: 94em; }
+
+  transition: all 0.2s;
+
+}
+
+ul.bg-image {
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: absolute;
+    height: 436px;
+    background: #052F53;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      position: absolute;
+      top: 0px;
+      display: block;
+      max-width: 1600px;
+      margin-left: -512px;
+      z-index: 0;
+    }
+  }
+}
+
+.wrap {
+  background: #fff;
+  position: relative;
+  z-index: 5 !important;
+  padding: 10px 20px 10px;
+
+  .main-content {
+    border-left: 1px solid $content-border-color;
+    border-right: 1px solid $content-border-color;
+  }
+
+  .main-content, .main-content-home, .sidebar-right, .sidebar-left {
+    padding-top: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-stack;
+  color: $drexel-blue;
+}
+
+.row {
+  .row {
+    margin-right: 0.34615rem; 
+  }
+}
+
+
+.logo {
+  height: 164px;
+
+  h1.lockup {
+    position: absolute;
+    top: 37px;
+    margin-right: 20px;
+
+    a {
+      img {
+
+
+      }
+    }
+  }
+}

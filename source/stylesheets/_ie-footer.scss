@@ -1,0 +1,88 @@
+footer.footer {
+  // position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #ffc600;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,.8);
+  box-shadow: 0 0 20px rgba(0,0,0,.8);
+
+  img.live-it {
+    margin-top: 20px;
+  }
+  
+  ul.inline {
+    margin: 28px 0 0;
+
+
+    li {
+      display: inline;
+      border-right: 1px solid $footer-border-color;
+      &:last-child { border: none; }
+
+      a {
+        padding: 0px;
+        padding-left: 4px;
+        padding-right: 6px;
+        color: #333;
+        font-size: 11px;
+      }
+    }
+  }
+  
+  ul.inline.social {
+    margin: 0px;
+
+    li {
+      border: none;
+      padding: 0px;
+
+      a {
+        padding: 0px;
+      }
+    }
+  }
+
+  p {
+    color: #333;
+
+    &.address {
+      margin: 7px 0;
+    }
+
+    &.social-label {
+      margin: 10px 0 5px;
+      margin-bottom: 0px;
+      font: 11px/1 Arial, sans-serif;
+    }
+  }
+
+
+  #skinny-nav {
+    border-top: 1px solid $footer-border-color;
+  }
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  *display: block;
+  *float: left;
+  background-image: image-url("sprite.png");
+  background-repeat: no-repeat;
+}
+
+
+.social-blue .duicon-facebook { 
+  background-position: -54px -247px; 
+}
+.social-blue .duicon-twitter { 
+  background-position: -84px -247px; 
+}
+.social-blue .duicon-flickr { 
+  background-position: -114px -247px; 
+}
+.social-blue .duicon-youtube { 
+  background-position: -144px -247px; 
+}
