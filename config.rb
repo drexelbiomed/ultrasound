@@ -55,6 +55,13 @@ page "index.html", :layout => "home-page"
 activate :livereload
 activate :directory_indexes
 
+set :http_prefix, "/"
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+
+set :haml, { :ugly => true, :format => :html5 }
+
 helpers do
   def current_page?(page)
     if page.title == current_page.data.title
@@ -85,17 +92,6 @@ helpers do
     end
     return a
   end
-
-  # Set Dynamic Production vs Deployment Paths Uncomment:
-
-  # def base_path
-  #   :build == true ? "/new04/neuroroboticslab/" : "/"
-  # end
-
-  # def img_path
-  #   return "#{base_path}images/"
-  # end
-
 end
 
 # Add bower's directory to sprockets asset path
@@ -103,20 +99,6 @@ after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
 end
-
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
-
-activate :relative_assets
-
-activate :livereload
-
-set :haml, { :ugly => true, :format => :html5 }
-
-
 
 # Build-specific configuration
 configure :build do
@@ -130,7 +112,7 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  activate :relative_assets
+  # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
