@@ -1,11 +1,11 @@
 @font-face {
   font-family: FuturaBold;
-  src: url("http://www.biomed.drexel.edu/new04/Content/fonts/FuturaStd-CondensedBold.otf") format("opentype");
-  src: url('http://www.biomed.drexel.edu/new04/Content/fonts/FuturaStd-CondensedBold.eot'); /* IE9 Compat Modes */
-  src: url('http://www.biomed.drexel.edu/new04/Content/fonts/FuturaStd-CondensedBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('http://www.biomed.drexel.edu/new04/Content/fonts/FuturaStd-CondensedBold.woff') format('woff'), /* Modern Browsers */
-       url('http://www.biomed.drexel.edu/new04/Content/fonts/FuturaStd-CondensedBold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('http://www.biomed.drexel.edu/new04/Content/fonts/FuturaStd-CondensedBold.svg#97efe9f156711da26e30d793e1abb77c') format('svg'); /* Legacy iOS */
+  src: font-url('FuturaStd-CondensedBold.otf') format("opentype");
+  src: font-url('FuturaStd-CondensedBold.eot'); /* IE9 Compat Modes */
+  src: font-url('FuturaStd-CondensedBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       font-url('FuturaStd-CondensedBold.woff') format('woff'), /* Modern Browsers */
+       font-url('FuturaStd-CondensedBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       font-url('FuturaStd-CondensedBold.svg#97efe9f156711da26e30d793e1abb77c') format('svg'); /* Legacy iOS */
   font-style:   normal;
   font-weight:  700;
 }
