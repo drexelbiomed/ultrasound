@@ -1,6 +1,7 @@
 / Foundation 3 for IE 9 and earlier
-/[if lte IE 9]<script src="javascripts/foundation-3.js"></script>
+= surround "<!--[if lte IE 8]>", "<![endif]-->" do
+  = javascript_include_tag "foundation-3"
 
 / Foundation 5 for IE 10 and up 
-= surround "<!--[if gt IE 9]><!-->", "<!--<![endif]-->" do
+= surround "<!--[if gte IE 9]><!-->", "<!--<![endif]-->" do
   = javascript_include_tag "foundation-5"

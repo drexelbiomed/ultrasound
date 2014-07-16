@@ -1,11 +1,14 @@
-/ Foundation 3 for IE 9 and earlier
-/[if IE 6]<link rel="stylesheet" href="stylesheets/foundation-3.css">
-/[if IE 7]<link rel="stylesheet" href="stylesheets/foundation-3.css">
-/[if IE 8]<link rel="stylesheet" href="stylesheets/foundation-3.css">
-/[if IE 9]<link rel="stylesheet" href="stylesheets/foundation-3.css">
+= surround "<!--[if lte IE 6]>", "<![endif]-->" do
+  = stylesheet_link_tag "foundation-3"
+
+= surround "<!--[if IE 7]>", "<![endif]-->" do
+  = stylesheet_link_tag "foundation-3"
+
+= surround "<!--[if IE 8]>", "<![endif]-->" do
+  = stylesheet_link_tag "foundation-3"
 
 / Foundation 5 for IE 10 and up 
-= surround "<!--[if gt IE 9]><!-->", "<!--<![endif]-->" do
+= surround "<!--[if gte IE 9]><!-->", "<!--<![endif]-->" do
   = stylesheet_link_tag "foundation-5"
 
 /[if lt IE 9]<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
