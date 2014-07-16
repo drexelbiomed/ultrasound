@@ -86,6 +86,16 @@ helpers do
     return a
   end
 
+  # Set Dynamic Production vs Deployment Paths Uncomment:
+
+  # def base_path
+  #   :build == true ? "/new04/neuroroboticslab/" : "/"
+  # end
+
+  # def img_path
+  #   return "#{base_path}images/"
+  # end
+
 end
 
 # Add bower's directory to sprockets asset path
@@ -99,6 +109,8 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+activate :relative_assets
 
 activate :livereload
 

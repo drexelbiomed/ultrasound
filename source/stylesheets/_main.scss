@@ -5,7 +5,7 @@
 } 
 
 body {
-  background-image: url("/images/wide.jpg");
+  background-image: image-url("wide.jpg");
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -89,6 +89,7 @@ ul.bg-image {
   position: relative;
   z-index: 5 !important;
   padding: 10px 20px 10px;
+  @media #{$medium-only} {padding: 10px 0px 10px 10px;}
 
   .main-content {
     @media #{$medium-up} {
@@ -97,27 +98,29 @@ ul.bg-image {
     }
   }
 
-  .main-content-home {
-    @media #{$medium-up} {
-      border-right: 1px solid $content-border-color;
-    }
-  }
-
-  // HEIGHT OF THE FOOTER
-  .main-content, .main-content-home {
-    
-
-  }
-
   .main-content, .main-content-home, .sidebar-right, .sidebar-left {
     padding-top: 14px;
+    @media #{$medium-only} {padding-top: 5px;}
   }
+}
+
+.columns.sidebar-right {
+  @media #{$medium-only} { padding: 5px 8px; }
 }
 
 h1, h2, h3, h4, h5, h6 {
   @include font-stack;
   color: $drexel-blue;
 }
+
+.row {
+  .row {
+    @media #{$small-only} { margin-right: 0.04615rem; }
+    @media #{$medium-only} { margin-right: -0.3rem; }
+    @media #{$large-up} { margin-right: 0.34615rem; }
+  }
+}
+
 
 .logo {
   height: 164px;

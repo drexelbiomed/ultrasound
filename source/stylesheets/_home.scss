@@ -1,0 +1,42 @@
+.home-panel {
+  background: $drexel-blue;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+
+  h3 {
+    color: #fff;
+    padding: 0.4em;
+    margin: 0;
+  }
+
+  ul {
+    list-style: none; // clear default styling
+    margin: 0;        // clear default styling
+    background: #fff;
+    margin-right: 2em;
+    @media #{$medium-only} { margin-right: 0.5em }
+    @media #{$large-only} { margin-right: 01em }
+
+    li {
+      border-left: 1px solid $drexel-blue;
+      border-bottom: 1px solid $drexel-blue;
+      padding: 10px;
+      // font-weight: bold;
+      @media #{$medium-only} { font-size: 10px; }
+
+    }
+  }
+
+}
+a.more-link {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #fff;
+  font-family: FuturaBold, sans-serif;
+  display: inline-block;
+  padding: 4px 0 0 27px;
+  height: 22px;
+  line-height: 14px;
+  background: image-url("sprite.png") no-repeat scroll 0 -422px;
+}
