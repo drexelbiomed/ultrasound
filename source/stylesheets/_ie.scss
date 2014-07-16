@@ -21,7 +21,7 @@ $drexel-yellow: #ffc600;
 } 
 
 body {
-  background-image: url("wide.jpg");
+  background-image:  image-url("wide.jpg");
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -334,7 +334,7 @@ footer.footer {
   display:inline-block;
   *display:block;
   *float:left;
-  background-image:url("sprite.png");
+  background-image: image-url("sprite.png");
   background-repeat:no-repeat;
 }
 
