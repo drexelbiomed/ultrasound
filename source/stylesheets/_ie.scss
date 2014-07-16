@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $drexel-blue;
 }
 
-nav.top-bar {
+.top-bar {
   height: 55px;
   background-color: transparent;
   margin-bottom: 0px;
@@ -110,24 +110,28 @@ nav.top-bar {
         line-height: 14px;
         &:after { display: none; }
         &::after { display: none; }
-        &.active { background-color: $drexel-blue; color: $drexel-yellow; }
-        &:hover { background-color: $drexel-blue; color: $drexel-yellow; }
-        &:focus { background-color: $drexel-blue; color: $drexel-yellow; }
+        &.active { background-color: transparent; color: $drexel-yellow; }
+        &:hover { background-color: transparent; color: $drexel-yellow; }
+        &:focus { background-color: transparent; color: $drexel-yellow; }
       }
-      ul.dropdown {
+      .dropdown {
         padding: 0px;
-        background-color: none;
+        background-color: transparent;
 
         li {
           padding: 10px 0px;
-          // background-color: $drexel-blue;
+          background-color: $drexel-blue;
+          // &:hover { background-color: transparent; }
 
           a {
-            padding: 10px 30px;
+            text-transform: none;
+            display: block;
+            padding: 10px 20px !important;
+            margin: 0px;
             font-size: 12px;
             font-family: Arial, sans-serif;
-            text-transform: none;
-            background-color: $drexel-blue;
+            background-color: transparent;
+            &:hover { background-color: transparent; }
             &.active { color: $drexel-yellow; }
           }
         }
@@ -135,16 +139,6 @@ nav.top-bar {
     }
   }
 }
-.top-bar ul > li.has-dropdown .dropdown {
-  background: none;
-  li {
-    background: none;
-    a {
-      background: none;
-    }
-  }
-}
-.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus { background: $drexel-blue; }
 
 nav.breadcrumb {
   margin-bottom: 0px;
@@ -318,5 +312,3 @@ footer.footer {
   clear: both;
   visibility: hidden;
 }
-
-@import "ie-slideshow";
