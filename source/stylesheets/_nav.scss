@@ -63,11 +63,17 @@ nav.top-bar {
         li {
           width: 200px;
           a {
+            padding: 10px 25px 10px !important;
             font-size: 12px;
             font-family: Arial, sans-serif;
             text-transform: none;
             white-space: normal;
             &.active { color: $drexel-yellow; }
+          }
+        }
+        li:last-child {
+          a {
+            padding-bottom: 20px !important;
           }
         }
       }
