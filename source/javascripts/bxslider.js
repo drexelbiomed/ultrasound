@@ -4,6 +4,6 @@ $(document).ready(function(){
     captions: true,
     auto: true,
     pause: 5000,
-    autoHover: true,
+    autoHover: true
   });
 });
