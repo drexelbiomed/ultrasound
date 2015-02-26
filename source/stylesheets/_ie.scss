@@ -47,6 +47,12 @@
     }
   }
 
+  .three.columns.sidebar-left {
+    position: absolute;
+    left: 0;
+    width: 23%;
+  }
+
   .bx-viewport { border: 0px !important; }
 }// --- End IE7 Fixes
 
@@ -111,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-bar {
   height: 55px;
-  background-color: transparent;
+  background-color: $drexel-blue;
   margin-bottom: 0px;
 
   ul.title-area {
@@ -146,11 +152,11 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 14px;
         &:after { display: none; }
         &::after { display: none; }
-        &.active { background-color: transparent; color: $drexel-yellow; }
-        &:hover { background-color: transparent; color: $drexel-yellow; }
-        &:focus { background-color: transparent; color: $drexel-yellow; }
+        &.active { background-color: $drexel-blue; color: $drexel-yellow; }
+        &:hover { background-color: $drexel-blue; color: $drexel-yellow; }
+        &:focus { background-color: $drexel-blue; color: $drexel-yellow; }
       }
-      .dropdown {
+      ul.dropdown {
         padding: 0px;
         background-color: transparent;
 

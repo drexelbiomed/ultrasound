@@ -4,6 +4,7 @@
 
 compass_config do |config|
   # Require any additional compass plugins here.
+  config.add_import_path "bower_components"
   config.add_import_path "bower_components/foundation/scss"
   config.add_import_path "bower_components/foundation-3/stylesheets"
   config.add_import_path "bower_components/normalize/"
@@ -114,9 +115,9 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  activate :relative_assets
+  # activate :relative_assets
 
-  set :relative_links, true
+  # set :relative_links, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
