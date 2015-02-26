@@ -1,38 +1,39 @@
 !!!
-/[if lte IE 9] <html class="no-js ie" lang="en">
-= surround "<!--[if gt IE 9]><!-->", "<!--<![endif]-->" do
-  %html( class="no-js" lang="en" )
-    %head
-      %meta( charset="utf-8" )
-      %meta( name="viewport" content="width=device-width, initial-scale=1.0" )
-      / Use title if it's in the page YAML frontmatter 
-      %title= "#{data.page.title} | #{data.info.site.title}" || "#{data.info.site.title}"
+/[if lt IE 8] <html class="no-js ie7" lang="en">
+/[if IE 8] <html class="no-js ie8" lang="en">
+/[if IE 9] <html class="no-js ie9" lang="en">
+= surround "<!--[if gt IE 9]><!--><html class='no-js' lang='en'><!--<![endif]-->", "</html>" do
+  %head
+    %meta( charset="utf-8" )
+    %meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+    / Use title if it's in the page YAML frontmatter 
+    %title= "#{data.page.title} | #{data.info.site.title}" || "#{data.info.site.title}"
 
-      = javascript_include_tag "modernizr"
-      = partial "css"
+    = javascript_include_tag "modernizr"
+    = partial "css"
 
-    %body{ :class => page_classes }
-      = partial "bg-image"
-      .height
-        .container
+  %body{ :class => page_classes }
+    = partial "bg-image"
+    .height
+      .container
+        .row
+          .twelve.large-12.columns
+            = partial "logo"
+        .row.wrap-nav
+          .twelve.large-12.columns
+            = partial "nav-topbar"
+        .row.wrap
           .row
             .twelve.large-12.columns
-              = partial "logo"
-          .row.wrap-nav
-            .twelve.large-12.columns
-              = partial "nav-topbar"
-          .row.wrap
-            .row
-              .twelve.large-12.columns
-                = partial "nav-breadcrumbs"
-            .row
-              .six.push-three.medium-6.medium-push-3.columns.main-content
-                = yield
-              .three.push-three.medium-3.medium-push-3.columns.sidebar-right
-                = partial "sidebar-right"
-              .three.pull-nine.medium-3.medium-pull-9.columns.sidebar-left
-                = partial "nav-sidebar"
-        %footer.footer
-          = partial "footer"
+              = partial "nav-breadcrumbs"
+          .row
+            .six.push-three.medium-6.medium-push-3.columns.main-content
+              = yield
+            .three.push-three.medium-3.medium-push-3.columns.sidebar-right
+              = partial "sidebar-right"
+            .three.pull-nine.medium-3.medium-pull-9.columns.sidebar-left
+              = partial "nav-sidebar"
+      %footer.footer
+        = partial "footer"
 
-      = partial "js"
+    = partial "js"

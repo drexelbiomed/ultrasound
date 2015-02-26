@@ -6,7 +6,51 @@
 @import "ie-home";
 @import "ie-slideshow";
 
-@mixin font-stack{
+// ================================
+//            IE7 fixes
+// ================================
+
+.ie7 {
+  .container {
+    .row.wrap-nav {
+      position: relative;
+      z-index: 100 !important;
+      padding-left: 41px;
+    }
+    .three.columns.sidebar-right {
+      padding-right: 0px;
+      width: 24%;
+    }
+  }
+
+  ul.centerthis {
+    // padding: 0;
+    // margin: 0;
+    // list-style: none;
+
+    li.has-dropdown {
+      position: relative;
+
+      ul.dropdown {
+        position: absolute;
+        top: 55px;
+        left: 0;
+
+        li {
+          position: relative !important;
+
+          a {
+
+          }
+        }
+      }
+    }
+  }
+
+  .bx-viewport { border: 0px !important; }
+}// --- End IE7 Fixes
+
+@mixin font-stack {
   font-family: FuturaBold, sans-serif;
   text-transform: uppercase;
 } 
@@ -20,14 +64,6 @@ body {
 .container {
   min-height: 100%;
   position: relative;
-
-
-  // @media #{$small-only} {
-  //   padding-bottom: 300px;
-  // }
-  // @media #{$medium-up} {
-  //   padding-bottom: 150px;
-  // }
 }
 
 ul.bg-image {
