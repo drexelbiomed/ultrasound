@@ -83,11 +83,12 @@ nav.top-bar {
 }
 
 nav.breadcrumb {
+  height: 39px;
+  padding: 10px 0;
   margin-bottom: 0px;
   border-bottom: 1px solid $content-border-color;
 
   ul {
-    margin-bottom: 10px;
     margin-left: 0px;
 
     li {
