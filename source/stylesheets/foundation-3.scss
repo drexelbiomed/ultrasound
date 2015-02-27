@@ -31,7 +31,29 @@
       }
     }
   }
+  ul.centerthis {
+    // padding: 0;
+    // margin: 0;
+    // list-style: none;
 
+    li.has-dropdown {
+      position: relative;
+
+      ul.dropdown {
+        position: absolute;
+        top: 55px;
+        left: 0;
+
+        li {
+          position: relative !important;
+
+          a {
+
+          }
+        }
+      }
+    }
+  }
 }// --- End ie8 fixes
 
 // ================================

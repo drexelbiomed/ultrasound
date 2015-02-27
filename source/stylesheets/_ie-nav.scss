@@ -20,6 +20,10 @@ nav.top-bar {
     }
   }
 
+  ul {
+    line-height: 55px;
+  }
+
   .top-bar-section {
     .centerthis {
       float: none !important;
@@ -28,17 +32,19 @@ nav.top-bar {
       margin: 0 auto;
     }
 
-    li.has-dropdown {
-      a {
-        @include font-stack;
-        color: #fff;
-        padding: 20px 30px 21px !important;
-        font-size: 14px;
-        line-height: 14px;
-        // @media #{$small-only} {}
-        &::after { display: none; }
-        &.active { color: $drexel-yellow; }
-        &:hover { color: $drexel-yellow; }
+    ul.centerthis {
+      li {
+        top: 0;
+        a {
+          @include font-stack;
+          color: #fff;
+          padding: 20px 30px 21px !important;
+          font-size: 14px;
+          line-height: 14px;
+          &::after { display: none; }
+          &.active { color: $drexel-yellow; }
+          &:hover { color: $drexel-yellow; }
+        }
       }
       ul.dropdown {
         li {
