@@ -1,14 +1,13 @@
 - title: Page 1
   url: page-1
+  sub_pages:
+    - title: Overview
+      url: overview
 - title: Page 2
   url: page-2
   sub_pages:
     - title: Sub page 4 has a really long multi-line title
       url: sub-page-4
-    # - title: Sub page 5
-    #   url: sub-page-5
-    # - title: Sub page 6
-    #   url: sub-page-6
 - title: Page 3
   url: page-3
   sub_pages:

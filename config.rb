@@ -1,4 +1,31 @@
 ###
+# Sprockets
+###
+require 'rake/file_list'
+require 'pathname'
+require 'date'
+
+bower_directory = 'source/bower_components'
+
+# Build search patterns
+patterns = [
+  '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
+  '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+  '.js',                                    # Javascript
+].map { |e| File.join(bower_directory, "**", "*#{e}" ) }
+
+# Create file list and exclude unwanted files
+Rake::FileList.new(*patterns) do |l|
+  l.exclude(/src/)
+  l.exclude(/test/)
+  l.exclude(/demo/)
+  l.exclude { |f| !File.file? f }
+end.each do |f|
+  # Import relative paths
+  sprockets.import_asset(Pathname.new(f).relative_path_from(Pathname.new(bower_directory)))
+end
+
+###
 # Compass
 ###
 
@@ -9,9 +36,9 @@ compass_config do |config|
   config.add_import_path "bower_components/foundation-3/stylesheets"
   config.add_import_path "bower_components/normalize/"
   config.add_import_path "bower_components/bxslider-4/"
-  
+
   # Set this to the root of your project when deployed:
-  config.http_path = "/"
+  config.http_path = "#{data.ftp.path}/"
   config.css_dir = "stylesheets"
   config.sass_dir = "stylesheets"
   config.images_dir = "images"
@@ -103,8 +130,22 @@ end
 
 # set :relative_links, true
 
+activate :deploy do |deploy|
+  # ...
+  deploy.build_before = false # default: false
+
+  deploy.method   = :ftp
+  deploy.host     = data.ftp.host
+  deploy.path     = data.ftp.path
+  deploy.user     = data.ftp.user
+  deploy.password = data.ftp.pass
+end
+
 # Build-specific configuration
 configure :build do
+  # Ignore irrelevant directories during build
+  ignore 'bower_components/**'
+
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
@@ -120,5 +161,5 @@ configure :build do
   # set :relative_links, true
 
   # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  set :http_prefix, "#{data.ftp.path}/"
 end
