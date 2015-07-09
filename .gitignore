@@ -21,5 +21,5 @@
 
 Gemfile.lock
 
-bower_components/
+source/bower_components/
 data/ftp.yml
