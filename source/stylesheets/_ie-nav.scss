@@ -57,6 +57,7 @@ nav.top-bar {
             &.active { color: $drexel-yellow; }
           }
         }
+        li.parent-link { display: none !important; }
       }
     }
   }
@@ -118,7 +119,7 @@ nav.nav-sidebar {
 
         &.active, &:hover {
           background-color: $drexel-yellow;
-        }   
+        }
       }
     }
   }
