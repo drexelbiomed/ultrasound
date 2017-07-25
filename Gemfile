@@ -4,8 +4,8 @@ source 'http://rubygems.org'
 
 gem "rake"
 
-gem "middleman"
-gem "middleman-deploy"
+gem "middleman", "~> 3.3.0"
+gem "middleman-deploy", "~> 1.0"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

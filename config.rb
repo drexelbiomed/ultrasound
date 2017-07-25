@@ -53,6 +53,9 @@ compass_config do |config|
 
 end
 
+# Disable HAML warnings
+Haml::TempleEngine.disable_option_validator!
+
 ###
 # Page options, layouts, aliases and proxies
 ###
