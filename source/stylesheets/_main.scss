@@ -154,3 +154,20 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+
+img.left {
+  padding-right: 1em;
+  padding-bottom: .5em;
+}
+
+ol {
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+ul.unstyled {
+  li {
+    list-style: none;
+  }
+}

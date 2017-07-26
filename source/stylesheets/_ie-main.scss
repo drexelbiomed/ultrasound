@@ -2,7 +2,7 @@
 @mixin font-stack{
   font-family: FuturaBold, sans-serif;
   text-transform: uppercase;
-} 
+}
 
 body {
   background-image: image-url("wide.jpg");
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .row {
   .row {
-    margin-right: 0.34615rem; 
+    margin-right: 0.34615rem;
   }
 }
 
@@ -88,5 +88,22 @@ h1, h2, h3, h4, h5, h6 {
 
       }
     }
+  }
+}
+
+img.left {
+  padding-right: 1em;
+  padding-bottom: .5em;
+}
+
+ol {
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+ul.unstyled {
+  li {
+    list-style: none;
   }
 }

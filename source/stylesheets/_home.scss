@@ -3,10 +3,14 @@
   padding-bottom: 1em;
   margin-bottom: 2em;
 
-  h3 {
+  h3, h4, h5, h6 {
     color: #fff;
     padding: 0.4em;
     margin: 0;
+  }
+
+  a.more-link {
+    color: #fff;
   }
 
   ul {
@@ -27,4 +31,19 @@
     }
   }
 
+}
+
+.bx-caption {
+  a.more-link {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: #fff;
+    font-family: FuturaBold, sans-serif;
+    display: inline-block;
+    padding: 4px 0 0 27px;
+    height: 22px;
+    line-height: 14px;
+    background: image-url("sprite.png") no-repeat scroll 0 -422px;
+  }
 }
