@@ -26,9 +26,9 @@ body {
   }
 
   @media #{$large-up} {
-    width: 980px;
+    width: 960px;
     margin: 0 auto;
-    .row { max-width: 94em; }
+    .row { max-width: 73.846em; }
   }
 
   @media #{$xlarge-up} {

@@ -70,7 +70,7 @@ ul.bxslider {
       position: absolute;
       top: 0px;
       left: 500px;
-      height: 335px; 
+      height: 335px;
       width: 380px;
       background-color: #07294D;
       padding: 36px 37px 0px;
@@ -103,8 +103,8 @@ ul.bxslider {
     }
   }
   .bx-controls {
-    @media #{$small-only} { 
-      position: relative; 
+    @media #{$small-only} {
+      position: relative;
       margin-left: 40px;
       margin-top: -40px;
       width: 142px;
@@ -173,4 +173,4 @@ a.bx-next {
       background-position: -106px -193px !important;
     }
   }
-} 
+}
