@@ -1,0 +1,50 @@
+!!!
+/[if lt IE 8] <html class="no-js ie7" lang="en">
+/[if IE 8] <html class="no-js ie8" lang="en">
+/[if IE 9] <html class="no-js ie9" lang="en">
+= surround "<!--[if gt IE 9]><!--><html class='no-js' lang='en'><!--<![endif]-->", "</html>" do
+  %head
+    %meta( charset="utf-8" )
+    %meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+    / Use title if it's in the page YAML frontmatter
+    %title= "#{data.page.title} | #{data.info.site.title}" || "#{data.info.site.title}"
+    %link{:rel => "shortcut icon", :href => "#{http_prefix}images/FavIcon.ico"}
+
+    = javascript_include_tag "modernizr"
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-48789419-1']);
+      _gaq.push(['_setDomainName', 'drexel.edu']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    = partial "css"
+
+  %body{ :class => page_classes }
+    = partial "bg-image"
+    .height
+      .container
+        .row
+          .twelve.large-12.columns
+            = partial "logo"
+        .row.wrap-nav
+          .twelve.large-12.columns
+            = partial "nav-topbar"
+        .row.wrap
+          .row
+            .twelve.large-12.columns#breadcrumb
+              = partial "nav-breadcrumbs"
+          .row
+            .nine.push-three.medium-9.medium-push-3.columns.main-content
+              = yield
+            .three.pull-nine.medium-3.medium-pull-9.columns.sidebar-left
+              = partial "nav-sidebar"
+      %footer.footer
+        = partial "footer"
+
+    = partial "js"

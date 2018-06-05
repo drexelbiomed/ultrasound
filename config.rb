@@ -136,7 +136,7 @@ end
 
 activate :deploy do |deploy|
   # ...
-  deploy.build_before = false # default: false
+  deploy.build_before = true # default: false
 
   deploy.method   = :ftp
   deploy.host     = data.ftp.host
@@ -149,6 +149,7 @@ end
 configure :build do
   # Ignore irrelevant directories during build
   ignore 'bower_components/**'
+  ignore '*.psd'
 
   # For example, change the Compass output style for deployment
   # activate :minify_css
