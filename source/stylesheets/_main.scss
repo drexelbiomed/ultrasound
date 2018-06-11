@@ -96,6 +96,12 @@ ul.bg-image {
       border-right: 1px solid $content-border-color;
     }
   }
+  .nine.medium-9.main-content {
+    @media #{$medium-up} {
+      border-left: 1px solid $content-border-color;
+      border-right: none;
+    }
+  }
 
   .main-content, .main-content-home, .sidebar-right, .sidebar-left {
     padding-top: 14px;
