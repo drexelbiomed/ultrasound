@@ -18,6 +18,8 @@
   sub_pages:
     - title: In The News
       url: in-the-news
+    - title: Recent News
+      url: recent
 - title: About
   url: about
   sub_pages:
