@@ -136,13 +136,14 @@ end
 
 activate :deploy do |deploy|
   # ...
-  deploy.build_before = true # default: false
+  # deploy.build_before = true # default: false
 
-  deploy.method   = :ftp
+  deploy.method   = :sftp
   deploy.host     = data.ftp.host
-  deploy.path     = data.ftp.path
+  deploy.path     = data.ftp.root + data.ftp.path
   deploy.user     = data.ftp.user
   deploy.password = data.ftp.pass
+  deploy.path     = 22
 end
 
 # Build-specific configuration
