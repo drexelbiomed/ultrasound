@@ -16,10 +16,10 @@
 - title: News
   url: news
   sub_pages:
-    - title: In The News
-      url: in-the-news
     - title: Recent News
       url: recent
+    - title: In The News
+      url: in-the-news
 - title: About
   url: about
   sub_pages:
